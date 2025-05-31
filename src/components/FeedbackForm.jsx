@@ -42,20 +42,20 @@ export default function FeedbackForm() {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label>Nama:</label><br />
-        <input name="name" value={form.name} onChange={handleChange} />
+        <label htmlFor='name'>Nama:</label><br />
+        <input id="name" name="name" value={form.name} onChange={handleChange} />
         {errors.name && <p style={{ color: 'red' }}>{errors.name}</p>}
       </div>
 
       <div>
-        <label>Email:</label><br />
-        <input name="email" value={form.email} onChange={handleChange} />
+        <label htmlFor='email'>Email:</label><br />
+        <input id="email" name="email" value={form.email} onChange={handleChange} />
         {errors.email && <p style={{ color: 'red' }}>{errors.email}</p>}
       </div>
 
       <div>
-        <label>Pesan:</label><br />
-        <textarea name="message" value={form.message} onChange={handleChange} />
+        <label htmlFor='pesan'>Pesan:</label><br />
+        <textarea id="pesan" name="message" value={form.message} onChange={handleChange} />
         {errors.message && <p style={{ color: 'red' }}>{errors.message}</p>}
       </div>
 
