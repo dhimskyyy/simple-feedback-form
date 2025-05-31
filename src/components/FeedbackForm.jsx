@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 export default function FeedbackForm() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -59,7 +59,7 @@ export default function FeedbackForm() {
         {errors.message && <p style={{ color: 'red' }}>{errors.message}</p>}
       </div>
 
-      <button type="submit">Kirim</button>
+      <button type="submit" data-testid="submit-button">Kirim</button>
     </form>
   );
 }
